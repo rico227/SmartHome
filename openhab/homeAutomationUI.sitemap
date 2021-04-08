@@ -1,0 +1,9 @@
+sitemap HomeAutomation label="Smart Home by Rico" {
+    Frame label="Datum" icon="calendar" {
+        Text item=Date
+    }
+    Frame label="Wetterstation" icon="temperature" {
+        Text item=MQTTBroker label="Temperatur [%.1f °C]"
+        Text item=DHT22 label="Luftfeuchtigkeit [%.1f Prozent]"
+    }
+}
