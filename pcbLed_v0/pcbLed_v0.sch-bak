@@ -13,34 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Device:Fuse F1
-U 1 1 60562F3C
-P 1900 2700
-F 0 "F1" V 1703 2700 50  0000 C CNN
-F 1 "Fuse 10A" V 1794 2700 50  0000 C CNN
-F 2 "Belfuse220043:BELFUSE220043_10A_SMD2410" V 1830 2700 50  0001 C CNN
-F 3 "~" H 1900 2700 50  0001 C CNN
-	1    1900 2700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1350 2700 1750 2700
-$Comp
-L Device:CP C1
-U 1 1 60564BA1
-P 2850 2850
-F 0 "C1" H 2968 2896 50  0000 L CNN
-F 1 "1mF" H 2968 2805 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 2888 2700 50  0001 C CNN
-F 3 "~" H 2850 2850 50  0001 C CNN
-	1    2850 2850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1350 2800 1550 2800
-Wire Wire Line
-	2050 2700 2200 2700
 Wire Wire Line
 	3450 6250 2950 6250
 Wire Wire Line
@@ -92,19 +64,6 @@ Wire Wire Line
 Connection ~ 4750 5650
 Wire Wire Line
 	4750 5650 4900 5650
-$Comp
-L power:+5V #PWR08
-U 1 1 605DCD5A
-P 4800 6150
-F 0 "#PWR08" H 4800 6000 50  0001 C CNN
-F 1 "+5V" H 4815 6323 50  0000 C CNN
-F 2 "" H 4800 6150 50  0001 C CNN
-F 3 "" H 4800 6150 50  0001 C CNN
-	1    4800 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4550 6150 4800 6150
 Wire Wire Line
 	4550 5850 7050 5850
 $Comp
@@ -169,44 +128,6 @@ Wire Wire Line
 	8050 5950 8250 5950
 Text Notes 8300 5850 0    50   ~ 0
 LED-Output
-Connection ~ 2350 2700
-Wire Wire Line
-	2350 2700 2850 2700
-Text Notes 3450 1350 0    50   ~ 0
-LED-Power-Outputs\n
-Connection ~ 2850 2700
-$Comp
-L Device:R R1
-U 1 1 605FAF51
-P 2350 2850
-F 0 "R1" H 2420 2896 50  0000 L CNN
-F 1 "100 RND 0402 1 100" H 1850 2800 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" V 2280 2850 50  0001 C CNN
-F 3 "~" H 2350 2850 50  0001 C CNN
-	1    2350 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED D1
-U 1 1 605FBCC8
-P 2350 3150
-F 0 "D1" V 2389 3032 50  0000 R CNN
-F 1 "LED EVL 17-21/GHC-X" V 2298 3032 50  0000 R CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2350 3150 50  0001 C CNN
-F 3 "" H 2350 3150 50  0001 C CNN
-	1    2350 3150
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1550 3300 2100 3300
-Wire Wire Line
-	1550 2800 1550 3300
-Wire Wire Line
-	2350 3300 2850 3300
-Connection ~ 2350 3300
-Wire Wire Line
-	2850 3000 2850 3300
-Connection ~ 2850 3300
 Text Notes 3800 5300 0    50   ~ 0
 Level Shifter
 $Comp
@@ -357,8 +278,6 @@ F 3 "~" H 1950 4250 50  0001 C CNN
 $EndComp
 Text Notes 1950 4200 0    50   ~ 0
 Fan Relay\n\n
-Wire Wire Line
-	1950 4450 1950 4700
 $Comp
 L Connector:Conn_01x03_Male J3
 U 1 1 607296B9
@@ -372,17 +291,6 @@ F 3 "~" H 2500 4250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2600 4450 2600 4650
-$Comp
-L Connector:Screw_Terminal_01x02 J1
-U 1 1 6075BB3A
-P 1150 2800
-F 0 "J1" H 1068 2475 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 1068 2566 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 1150 2800 50  0001 C CNN
-F 3 "~" H 1150 2800 50  0001 C CNN
-	1    1150 2800
-	-1   0    0    1   
-$EndComp
 $Comp
 L SamacSys_Parts:SN74AHCT125N IC1
 U 1 1 6077B2A2
@@ -400,19 +308,6 @@ F 9 "SN74AHCT125N" H 4400 5050 50  0001 L CNN "Manufacturer_Part_Number"
 	1    3450 5650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2500 4450 2500 4700
-Wire Wire Line
-	1850 4450 1850 4700
-Wire Wire Line
-	1850 4700 700  4700
-Wire Wire Line
-	700  2250 2200 2250
-Wire Wire Line
-	2200 2250 2200 2700
-Connection ~ 2200 2700
-Wire Wire Line
-	2200 2700 2350 2700
 $Comp
 L power:GND #PWR0101
 U 1 1 6075FB0E
@@ -437,15 +332,6 @@ F 3 "~" H 10300 5800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10300 5800 10300 5900
-Wire Wire Line
-	2400 5000 700  5000
-Wire Wire Line
-	2400 4450 2400 5000
-Wire Wire Line
-	700  2250 700  4700
-Connection ~ 700  4700
-Wire Wire Line
-	700  4700 700  5000
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 607687FE
@@ -489,54 +375,11 @@ Wire Wire Line
 	6550 3550 6300 3550
 Wire Wire Line
 	2600 4650 5450 4650
-Wire Wire Line
-	2850 2700 3200 2700
-Wire Wire Line
-	3200 1850 3200 2700
 $Comp
-L Connector:Screw_Terminal_01x04 J4
-U 1 1 607920A9
-P 3300 1650
-F 0 "J4" V 3264 1362 50  0000 R CNN
-F 1 "Screw_Terminal_01x04" V 3173 1362 50  0000 R CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-4_P5.00mm" H 3300 1650 50  0001 C CNN
-F 3 "~" H 3300 1650 50  0001 C CNN
-	1    3300 1650
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3200 2700 3300 2700
-Connection ~ 3200 2700
-Wire Wire Line
-	3500 1850 3500 3300
-Wire Wire Line
-	2850 3300 3050 3300
-Wire Wire Line
-	3300 1850 3300 2700
-Wire Wire Line
-	3400 1850 3400 3300
-Connection ~ 3400 3300
-Wire Wire Line
-	3400 3300 3500 3300
-Wire Wire Line
-	2500 4700 3050 4700
-Wire Wire Line
-	3050 4700 3050 3300
-Connection ~ 3050 3300
-Wire Wire Line
-	3050 3300 3400 3300
-Wire Wire Line
-	1950 4700 2100 4700
-Wire Wire Line
-	2100 4700 2100 3300
-Connection ~ 2100 3300
-Wire Wire Line
-	2100 3300 2350 3300
-$Comp
-L power:+5V #PWR?
+L power:+5V #PWR0102
 U 1 1 6076A326
 P 5800 2700
-F 0 "#PWR?" H 5800 2550 50  0001 C CNN
+F 0 "#PWR0102" H 5800 2550 50  0001 C CNN
 F 1 "+5V" H 5815 2873 50  0000 C CNN
 F 2 "" H 5800 2700 50  0001 C CNN
 F 3 "" H 5800 2700 50  0001 C CNN
@@ -545,4 +388,281 @@ F 3 "" H 5800 2700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5800 2700 5800 2850
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 607852A3
+P 1100 900
+F 0 "H1" H 1200 946 50  0000 L CNN
+F 1 "MountingHole" H 750 800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1100 900 50  0001 C CNN
+F 3 "~" H 1100 900 50  0001 C CNN
+	1    1100 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 60785916
+P 1350 900
+F 0 "H2" H 1450 946 50  0000 L CNN
+F 1 "MountingHole" H 1100 1050 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1350 900 50  0001 C CNN
+F 3 "~" H 1350 900 50  0001 C CNN
+	1    1350 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 60785AAF
+P 1600 900
+F 0 "H3" H 1700 946 50  0000 L CNN
+F 1 "MountingHole" H 1400 800 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1600 900 50  0001 C CNN
+F 3 "~" H 1600 900 50  0001 C CNN
+	1    1600 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 60785CE9
+P 1850 900
+F 0 "H4" H 1950 946 50  0000 L CNN
+F 1 "MountingHole" H 1950 855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1850 900 50  0001 C CNN
+F 3 "~" H 1850 900 50  0001 C CNN
+	1    1850 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 6078EA9C
+P 1850 4650
+F 0 "#PWR01" H 1850 4500 50  0001 C CNN
+F 1 "+5V" H 1865 4823 50  0000 C CNN
+F 2 "" H 1850 4650 50  0001 C CNN
+F 3 "" H 1850 4650 50  0001 C CNN
+	1    1850 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 6078F4B6
+P 2400 4650
+F 0 "#PWR03" H 2400 4500 50  0001 C CNN
+F 1 "+5V" H 2415 4823 50  0000 C CNN
+F 2 "" H 2400 4650 50  0001 C CNN
+F 3 "" H 2400 4650 50  0001 C CNN
+	1    2400 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 6078F961
+P 1950 4650
+F 0 "#PWR02" H 1950 4400 50  0001 C CNN
+F 1 "GND" H 1955 4477 50  0000 C CNN
+F 2 "" H 1950 4650 50  0001 C CNN
+F 3 "" H 1950 4650 50  0001 C CNN
+	1    1950 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 60790119
+P 2500 4650
+F 0 "#PWR04" H 2500 4400 50  0001 C CNN
+F 1 "GND" H 2505 4477 50  0000 C CNN
+F 2 "" H 2500 4650 50  0001 C CNN
+F 3 "" H 2500 4650 50  0001 C CNN
+	1    2500 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4650 2500 4450
+Wire Wire Line
+	2400 4650 2400 4450
+Wire Wire Line
+	1850 4650 1850 4450
+Wire Wire Line
+	1950 4450 1950 4650
+Text GLabel 6500 3350 2    50   Input ~ 0
+D1
+Wire Wire Line
+	6500 3350 6300 3350
+Text GLabel 5700 6150 2    50   Input ~ 0
+D1
+$Comp
+L Device:R R4
+U 1 1 60798DC5
+P 4900 6250
+F 0 "R4" V 4693 6250 50  0000 C CNN
+F 1 "470R" V 4784 6250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" V 4830 6250 50  0001 C CNN
+F 3 "~" H 4900 6250 50  0001 C CNN
+	1    4900 6250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 6150 5300 6150
+Wire Wire Line
+	4750 6250 4550 6250
+$Comp
+L Connector:Conn_01x03_Male J5
+U 1 1 6079C454
+P 5950 6700
+F 0 "J5" H 5922 6632 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 5922 6723 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5950 6700 50  0001 C CNN
+F 3 "~" H 5950 6700 50  0001 C CNN
+	1    5950 6700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5050 6250 5050 6700
+Wire Wire Line
+	5050 6700 5300 6700
+$Comp
+L power:+5V #PWR08
+U 1 1 6079F110
+P 5600 6500
+F 0 "#PWR08" H 5600 6350 50  0001 C CNN
+F 1 "+5V" H 5615 6673 50  0000 C CNN
+F 2 "" H 5600 6500 50  0001 C CNN
+F 3 "" H 5600 6500 50  0001 C CNN
+	1    5600 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 6500 5600 6600
+Wire Wire Line
+	5600 6600 5750 6600
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 607A167B
+P 5300 6400
+F 0 "JP2" V 5254 6468 50  0000 L CNN
+F 1 "SolderJumper_2_Open" V 5400 6450 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 5300 6400 50  0001 C CNN
+F 3 "~" H 5300 6400 50  0001 C CNN
+	1    5300 6400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 6550 5300 6700
+Connection ~ 5300 6700
+Wire Wire Line
+	5300 6700 5750 6700
+Wire Wire Line
+	5300 6250 5300 6150
+Connection ~ 5300 6150
+Wire Wire Line
+	5300 6150 5700 6150
+$Comp
+L power:GND #PWR010
+U 1 1 607A5794
+P 5600 6900
+F 0 "#PWR010" H 5600 6650 50  0001 C CNN
+F 1 "GND" H 5605 6727 50  0000 C CNN
+F 2 "" H 5600 6900 50  0001 C CNN
+F 3 "" H 5600 6900 50  0001 C CNN
+	1    5600 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 6900 5600 6800
+Wire Wire Line
+	5600 6800 5750 6800
+Wire Wire Line
+	3750 1750 3750 2250
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 607865A6
+P 3950 1650
+F 0 "J4" H 4030 1642 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 4030 1551 50  0000 L CNN
+F 2 "TerminalBlock_Altech:Altech_AK300_1x02_P5.00mm_45-Degree" H 3950 1650 50  0001 C CNN
+F 3 "~" H 3950 1650 50  0001 C CNN
+	1    3950 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 1750 1800 2250
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 6075BB3A
+P 1400 1750
+F 0 "J1" H 1318 1425 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 1318 1516 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 1400 1750 50  0001 C CNN
+F 3 "~" H 1400 1750 50  0001 C CNN
+	1    1400 1750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3100 2250 3750 2250
+Connection ~ 3100 2250
+Wire Wire Line
+	3100 1950 3100 2250
+Wire Wire Line
+	1800 2250 2600 2250
+Wire Wire Line
+	2600 2250 3100 2250
+Connection ~ 2600 2250
+$Comp
+L Device:LED D1
+U 1 1 605FBCC8
+P 2600 2100
+F 0 "D1" V 2639 1982 50  0000 R CNN
+F 1 "LED EVL 17-21/GHC-X" V 2548 1982 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2600 2100 50  0001 C CNN
+F 3 "" H 2600 2100 50  0001 C CNN
+	1    2600 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 605FAF51
+P 2600 1800
+F 0 "R1" H 2670 1846 50  0000 L CNN
+F 1 "100 RND 0402 1 100" H 2100 1750 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" V 2530 1800 50  0001 C CNN
+F 3 "~" H 2600 1800 50  0001 C CNN
+	1    2600 1800
+	1    0    0    -1  
+$EndComp
+Text Notes 2350 1400 0    50   ~ 0
+LED-Power-Supply
+Wire Wire Line
+	2300 1650 2600 1650
+Connection ~ 2600 1650
+Wire Wire Line
+	1600 1750 1800 1750
+Wire Wire Line
+	3100 1650 3750 1650
+Wire Wire Line
+	2600 1650 3100 1650
+Connection ~ 3100 1650
+$Comp
+L Device:CP C1
+U 1 1 60564BA1
+P 3100 1800
+F 0 "C1" H 3218 1846 50  0000 L CNN
+F 1 "1mF" H 3218 1755 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 3138 1650 50  0001 C CNN
+F 3 "~" H 3100 1800 50  0001 C CNN
+	1    3100 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1650 2000 1650
+$Comp
+L Device:Fuse F1
+U 1 1 60562F3C
+P 2150 1650
+F 0 "F1" V 1953 1650 50  0000 C CNN
+F 1 "Fuse 10A" V 2044 1650 50  0000 C CNN
+F 2 "Belfuse220043:BELFUSE220043_10A_SMD2410" V 2080 1650 50  0001 C CNN
+F 3 "~" H 2150 1650 50  0001 C CNN
+	1    2150 1650
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
